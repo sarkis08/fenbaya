@@ -29,8 +29,8 @@ export function formatPrice(
 export function constructMetadata({
   title = 'fenbaya - the marketplace for goods',
   description = 'fenbaya is an marketplace for local and international products.',
-  image = '/thumbnail.png',
-  icons = '/favicon.ico',
+  image = '/thumbnail.jpg',
+  icons = '/favicon.png',
   noIndex = false,
 }: {
   title?: string
