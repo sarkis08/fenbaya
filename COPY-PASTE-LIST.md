@@ -250,7 +250,7 @@ return res.status(200).send()
         </Column>
         </Section>
         <Section style={informationTable}>
-        <Row style={informationTableRow}>
+        <Row style={inionTableRow}>
             <Column style={informationTableColumn}>
             <Text style={informationTableLabel}>EMAIL</Text>
             <Link

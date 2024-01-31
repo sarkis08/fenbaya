@@ -74,12 +74,12 @@ const Cart = () => {
                   <span className='flex-1'>
                     Transaction Fee
                   </span>
-                  <span>{formatPrice(fee)}</span>
+                  <span>SLL {fee}</span>
                 </div>
                 <div className='flex'>
                   <span className='flex-1'>Total</span>
                   <span>
-                    {formatPrice(cartTotal + fee)}
+                    SLL {cartTotal + fee}
                   </span>
                 </div>
               </div>

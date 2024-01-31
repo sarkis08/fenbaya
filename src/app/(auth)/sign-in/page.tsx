@@ -26,15 +26,15 @@ import Image from 'next/image'
 const Page = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
-  const isSellerOrSearcher = searchParams.get('as') === 'seller_or_searcher'
+  const isSeller = searchParams.get('as') === 'seller'
   const origin = searchParams.get('origin')
 
-  const continueAsSellerOrSearcher = () => {
-    router.push('?as=seller_or_searcher')
+  const continueAsSeller = () => {
+    router.push('?as=seller')
   }
 
   const continueAsBuyer = () => {
-    router.replace('/sign-in', undefined)
+    router.replace('/sign-in' || undefined)
   }
 
   const {
@@ -57,7 +57,7 @@ const Page = () => {
           return
         }
 
-        if (isSellerOrSearcher) {
+        if (isSeller) {
           router.push('/sell')
           return
         }
@@ -85,7 +85,7 @@ const Page = () => {
           <div className='flex flex-col items-center space-y-2 text-center'>
             <Image src="/logo.png" alt='fenbaya logo' width="100" height="60" className='h-20 w-20' />
             <h1 className='text-2xl font-semibold tracking-tight'>
-              Sign in to your {isSellerOrSearcher ? 'seller or searcher' : ''}{' '}
+              Sign in to your {isSeller ? 'seller' : ''}{' '}
               account
             </h1>
 
@@ -160,7 +160,7 @@ const Page = () => {
               </div>
             </div>
 
-            {isSellerOrSearcher ? (
+            {isSeller ? (
               <Button
                 onClick={continueAsBuyer}
                 variant='secondary'
@@ -169,10 +169,10 @@ const Page = () => {
               </Button>
             ) : (
               <Button
-                onClick={continueAsSellerOrSearcher}
+                onClick={continueAsSeller}
                 variant='secondary'
                 disabled={isLoading}>
-                Continue as seller or searcher
+                Continue as seller
               </Button>
             )}
           </div>

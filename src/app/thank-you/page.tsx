@@ -155,7 +155,9 @@ const ThankYouPage = async ({
                         </div>
 
                         <p className='flex-none font-medium text-gray-900'>
-                          {formatPrice(product.price)}
+                          SLL {product.price}
+
+        
                         </p>
                       </li>
                     )
@@ -167,21 +169,21 @@ const ThankYouPage = async ({
                 <div className='flex justify-between'>
                   <p>Subtotal</p>
                   <p className='text-gray-900'>
-                    {formatPrice(orderTotal)}
+                    SLL {orderTotal}
                   </p>
                 </div>
 
                 <div className='flex justify-between'>
                   <p>Transaction Fee</p>
                   <p className='text-gray-900'>
-                    {formatPrice(1)}
+                    SLL {1}
                   </p>
                 </div>
 
                 <div className='flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900'>
                   <p className='text-base'>Total</p>
                   <p className='text-base'>
-                    {formatPrice(orderTotal + 1)}
+                    SLL {orderTotal + 1}
                   </p>
                 </div>
               </div>

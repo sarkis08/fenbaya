@@ -126,7 +126,7 @@ const Page = () => {
                             </div>
 
                             <p className='mt-1 text-sm font-medium text-gray-900'>
-                              {formatPrice(product.price)}
+                              {`SLL ${product.price}`}
                             </p>
                           </div>
 
@@ -173,7 +173,7 @@ const Page = () => {
                 </p>
                 <p className='text-sm font-medium text-gray-900'>
                   {isMounted ? (
-                    formatPrice(cartTotal)
+                    `SLL ${cartTotal}`
                   ) : (
                     <Loader2 className='h-4 w-4 animate-spin text-muted-foreground' />
                   )}
@@ -186,7 +186,7 @@ const Page = () => {
                 </div>
                 <div className='text-sm font-medium text-gray-900'>
                   {isMounted ? (
-                    formatPrice(fee)
+                    `SLL ${fee}`
                   ) : (
                     <Loader2 className='h-4 w-4 animate-spin text-muted-foreground' />
                   )}
@@ -199,7 +199,7 @@ const Page = () => {
                 </div>
                 <div className='text-base font-medium text-gray-900'>
                   {isMounted ? (
-                    formatPrice(cartTotal + fee)
+                    `SLL ${cartTotal + fee}`
                   ) : (
                     <Loader2 className='h-4 w-4 animate-spin text-muted-foreground' />
                   )}

@@ -8,7 +8,7 @@ import { Product } from '@/payload-types'
 const AddToCartButton = ({
   product,
 }: {
-  product: Product
+  product: Product,
 }) => {
   const { addItem } = useCart()
   const [isSuccess, setIsSuccess] = useState<boolean>(false)
@@ -30,7 +30,7 @@ const AddToCartButton = ({
       size='lg'
       className='w-full'>
       {isSuccess ? 'Added!' : 'Add to cart'}
-    </Button>
+      </Button>
   )
 }
 
